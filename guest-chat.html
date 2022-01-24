@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style type="text/css" scoped>
+        body {
+            box-sizing: border-box;
+            max-width: 968px;
+            padding-top: 50px;
+            margin: 0 auto;
+            background-color: rgba(0, 12, 30, 1);
+            font-family: Consolas;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .theme * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .theme {
+            width: 100%;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: min-content;
+        }
+
+        .theme-part {
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid white;
+            border-radius: 20px;
+            height: 680px;
+            overflow-y: scroll;
+        }
+
+        .image-part {
+            background: url("https://i.ibb.co/fQNLd2P/1-FDD32-EE-F736-4911-86-D5-BE1-A486-D6-BC8.jpg") center no-repeat;
+            background-size: cover;
+            overflow-y: scroll;
+        }
+
+        .image-part::-webkit-scrollbar {
+            display: none;
+        }
+
+        .theme-message-list {
+            height: calc(100% - 20px);
+            margin: 10px;
+            overflow-y: scroll;
+        }
+
+        .theme-message-list::-webkit-scrollbar {
+            width: 5px;
+            height: 90%;
+            background-color: rgba(0, 12, 30, 0.5);
+        }
+
+        .theme-part::-webkit-scrollbar {
+            display: none;
+        }
+
+        .message-part-wrapper {
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .theme-message-list::-webkit-scrollbar-thumb {
+            background-color: white;
+            height: 20px;
+        }
+
+        h4.theme-header {
+            color: rgb(207, 87, 132);
+            text-transform: uppercase;
+            font: 1.8em Roboto;
+            font-weight: 300;
+        }
+
+        .theme-header span {
+            font-weight: 700;
+            color: white;
+        }
+
+        .theme-welcome-text {
+            font-size: 135%;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .theme-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .theme-element {
+            display: block;
+            width: 100%;
+            position: relative;
+
+        }
+
+        .theme-element:last-child {
+            margin: 0;
+        }
+
+        .theme-element-link {
+            display: block;
+            width: 100%;
+            height: 60px;
+            padding: 0.3em 0 0px 2.5em;
+            background: url(https://i.ibb.co/Mp5vLL9/38061.png) left no-repeat;
+            text-transform: uppercase;
+            font-size: 2em;
+            color: rgb(207, 87, 132);
+            font-family: Roboto;
+            text-decoration: none;
+        }
+
+        .theme-element:hover>.theme-element-link {
+            background: url("https://i.ibb.co/q54YRmJ/56591.png") left no-repeat;
+            color: rgb(202, 134, 159);
+        }
+
+        .theme-message {
+            display: none;
+            color: white;
+            background: rgba(0, 12, 30, 0.5);
+            ;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .theme-message-close {
+            display: block;
+            text-align: right;
+        }
+
+        .theme-message-close:hover {
+            cursor: pointer;
+        }
+
+        @media (max-width: 750px) {
+            .theme {
+                width: 100%;
+                display: grid;
+                gap: 10px;
+                padding: 5px;
+                grid-template-columns: calc(100% - 10px);
+                grid-template-rows: minmax(240px, auto);
+            }
+
+            .image-part {
+                background: url("https://i.ibb.co/0cZmZdk/guest-theme-topic.jpg") center no-repeat;
+                background-size: cover;
+                max-height: 240px;
+            }
+
+            h4.theme-header {
+                font-size: 1.4em;
+            }
+
+            .message-part {
+                padding: 10px;
+            }
+
+            .message-text {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+
+            .theme-element-link {
+                padding: 0.5em 0 0px 2.5em;
+                font-size: 1.7em;
+                display: block;
+            }
+
+            .theme-element:hover>.theme-element-link {
+                background: url("https://i.ibb.co/q54YRmJ/56591.png") left no-repeat;
+            }
+
+        }
+
+        @media (max-width: 450px) {
+            .theme {
+                grid-template-rows: minmax(160px, auto);
+                background-size: 100%;
+            }
+
+            .image-part {
+                max-height: 190px;
+            }
+        }
+    </style>
+
+
+    <div class="theme">
+        <div class="theme-part image-part">
+            <ul class="theme-message-list">
+                <li class="theme-message-element">
+                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
+                        ipsum
+                        dolor sit amet consectetur adipisicing elit. Nobis,
+                        maiores. Omnis in, nesciunt
+                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
+                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
+                        neque
+                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
+                        quas
+                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
+                        quae
+                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
+                        ut
+                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
+                        sunt iusto
+                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
+                </li>
+                <li class="theme-message-element">
+                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
+                        ipsum
+                        dolor sit amet consectetur adipisicing elit. Nobis,
+                        maiores. Omnis in, nesciunt
+                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
+                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
+                        neque
+                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
+                        quas
+                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
+                        quae
+                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
+                        ut
+                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
+                        sunt iusto
+                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
+                </li>
+                <li class="theme-message-element">
+                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
+                        ipsum
+                        dolor sit amet consectetur adipisicing elit. Nobis,
+                        maiores. Omnis in, nesciunt
+                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
+                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
+                        neque
+                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
+                        quas
+                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
+                        quae
+                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
+                        ut
+                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
+                        sunt iusto
+                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
+                </li>
+                <li class="theme-message-element">
+                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
+                        ipsum
+                        dolor sit amet consectetur adipisicing elit. Nobis,
+                        maiores. Omnis in, nesciunt
+                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
+                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
+                        neque
+                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
+                        quas
+                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
+                        quae
+                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
+                        ut
+                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
+                        sunt iusto
+                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
+                </li>
+            </ul>
+        </div>
+        <div class="theme-part message-part">
+            <div class="message-part-wrapper">
+                <h4 class="theme-header">
+                    From: <span>Dispatcher</span> <br> Re: <span>Приветственное сообщение </span><br><br> Message:
+                </h4>
+                <p class="theme-welcome-text">Добро пожаловать в Делириум, Гость!
+                    <br>
+                    Я Диспетчер, здешний всезнайка. Прежде, чем гуглить вопрос, прочти несколько тем, которые я
+                    прикрепил к
+                    сообщению.
+                </p>
+                <ul class="theme-list">
+                    <li class="theme-element">
+                        <a href="#" class="theme-element-link">Правила</a>
+                    </li>
+                    <li class="theme-element">
+                        <a href="#" class="theme-element-link">Внешность</a>
+                    </li>
+                    <li class="theme-element">
+                        <a href="#" class="theme-element-link">Описание</a>
+                    </li>
+                    <li class="theme-element">
+                        <a href="#" class="theme-element-link">Админы</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const theme = document.querySelector('.theme');
+        const themeLinks = theme.querySelectorAll('.theme-element-link');
+        const themeMessages = theme.querySelectorAll('.theme-message');
+        const closeButtons = theme.querySelectorAll('.theme-message-close');
+        for (let i = 0; i < themeLinks.length; i++) {
+            themeLinks[i].addEventListener('click', (evt) => {
+                evt.preventDefault();
+                if (themeMessages[i].style.display == "") {
+                    themeMessages[i].style = "display: block;";
+                } else {
+                    themeMessages[i].style.display = "";
+                }
+            });
+            closeButtons[i].addEventListener('click', () => {
+                themeMessages[i].style.display = "";
+            });
+        }
+    </script>
+</body>
+
+</html>
