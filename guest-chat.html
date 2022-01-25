@@ -72,7 +72,7 @@
         .theme-message-list::-webkit-scrollbar {
             width: 5px;
             height: 90%;
-            background-color: rgba(0, 12, 30, 0.5);
+            background-color: rgba(0, 12, 30, 0.7);
         }
 
         .theme-part::-webkit-scrollbar {
@@ -146,10 +146,8 @@
         }
 
         .theme-message {
-            display: none;
             color: white;
-            background: rgba(0, 12, 30, 0.5);
-            ;
+            background: rgba(0, 12, 30, 0.7);
             border-radius: 20px;
             margin: 10px;
             padding: 10px;
@@ -162,6 +160,10 @@
 
         .theme-message-close:hover {
             cursor: pointer;
+        }
+
+        .template-messages {
+            display: none;
         }
 
         @media (max-width: 750px) {
@@ -221,86 +223,7 @@
     <div class="theme">
         <div class="theme-part image-part">
             <ul class="theme-message-list">
-                <li class="theme-message-element">
-                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
-                        ipsum
-                        dolor sit amet consectetur adipisicing elit. Nobis,
-                        maiores. Omnis in, nesciunt
-                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
-                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
-                        neque
-                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
-                        quas
-                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-                        quae
-                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
-                        ut
-                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
-                        adipisicing
-                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
-                        sunt iusto
-                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
-                </li>
-                <li class="theme-message-element">
-                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
-                        ipsum
-                        dolor sit amet consectetur adipisicing elit. Nobis,
-                        maiores. Omnis in, nesciunt
-                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
-                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
-                        neque
-                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
-                        quas
-                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-                        quae
-                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
-                        ut
-                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
-                        adipisicing
-                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
-                        sunt iusto
-                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
-                </li>
-                <li class="theme-message-element">
-                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
-                        ipsum
-                        dolor sit amet consectetur adipisicing elit. Nobis,
-                        maiores. Omnis in, nesciunt
-                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
-                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
-                        neque
-                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
-                        quas
-                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-                        quae
-                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
-                        ut
-                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
-                        adipisicing
-                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
-                        sunt iusto
-                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
-                </li>
-                <li class="theme-message-element">
-                    <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span> Lorem
-                        ipsum
-                        dolor sit amet consectetur adipisicing elit. Nobis,
-                        maiores. Omnis in, nesciunt
-                        officia saepe fugit voluptate qui adipisci debitis neque magnam, iste illum quidem temporibus, a
-                        eos! Vero, quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos cupiditate
-                        neque
-                        aliquid inventore adipisci non veniam repellendus eius corporis aliquam sequi commodi delectus
-                        quas
-                        nesciunt, quo qui accusamus ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-                        quae
-                        incidunt maxime, numquam repellendus tenetur nisi expedita itaque vel architecto accusamus nulla
-                        ut
-                        deleniti commodi laboriosam repellat quos atque sit. Lorem ipsum dolor sit amet consectetur
-                        adipisicing
-                        elit. Ipsum sapiente ratione neque atque accusantium. Mollitia ab perferendis debitis maxime
-                        sunt iusto
-                        officiis corporis soluta laboriosam veritatis blanditiis, nam, in a. </p>
-                </li>
+
             </ul>
         </div>
         <div class="theme-part message-part">
@@ -330,25 +253,73 @@
                 </ul>
             </div>
         </div>
+
+        <ul class="template-messages">
+            <li class="theme-message-element">
+                <p class="theme-message theme-rules"><span tabindex="1" class="theme-message-close">X</span>
+                    Самое главное правило нашей компании: <b>"Don't be a dick, Dick"</b>. <br><br>Все остальное - в
+                    рамках
+                    здравого смысла. Администрация оставляет за собой право утверждать свой здравый смысл на
+                    территории Делириума, но не слишком часто и максимально нежно.
+                </p>
+            </li>
+            <li class="theme-message-element">
+                <p class="theme-message theme-appearance"><span tabindex="1" class="theme-message-close">X</span>
+                    Коротко: <b>должны быть в стиле нашего заведения.</b> <br><br>
+                    Мы предпочитаем рисованные внешности. Это авторский мир, в котором видеть унылые 3d
+                    мордашки, которые наблюдаем каждый день, нам не хочется. Что не означает, что нельзя брать
+                    реальный
+                    прототип для роли. Просто придерживайтесь общей стилистики оформления форума. <br><br>
+                    Размер аватарки у нас фиксированный и она обязательно должна быть квадратной формы. Неквадратные
+                    аватарки будут становиться равносторонними принудительно по алгоритму одного ленивого
+                    программиста. Результат может вас не порадовать. Чтобы обрезать, изменить размер картинки
+                    достаточно Пеинта или онлайн ресурсов, таких как, например, <a href="https://www.iloveimg.com/"
+                        style="color: rgb(207, 87, 132); font-weight: 700;">ILOVEIMG</a>.
+                </p>
+            </li>
+            <li class="theme-message-element">
+                <p class="theme-message theme-plot"><span tabindex="1" class="theme-message-close">X</span>
+                    <b>Жанр:</b> сай-фай, городское фентези, постапок, немного кибер-панк<br>
+                    <b>Сюжет:</b>
+                    На планете из известных нам остался всего 1 город, мегаполис Делириум. Катаклизмы на планете
+                    сделали погоду за его пределами практически невозможной для выживания, внутри все еще действуют
+                    механизмы ее подавления. Даже нормальное
+                    атмосферное давление изменилось настолько, что человечество вынуждено было изобрести 5 видов
+                    прививок, которые позволяют ускорить крайне медленный процесс эволюции для выживания. Звучит
+                    знакомо? Хм...
+                </p>
+            </li>
+            <li class="theme-message-element">
+                <p class="theme-message theme-admin"><span tabindex="1" class="theme-message-close">X</span>
+                    Диспетчер Алиса: автор мира и форума.
+                </p>
+            </li>
+        </ul>
     </div>
 
     <script type="text/javascript">
         const theme = document.querySelector('.theme');
         const themeLinks = theme.querySelectorAll('.theme-element-link');
         const themeMessages = theme.querySelectorAll('.theme-message');
+        const themeMessagesList = theme.querySelector('.theme-message-list');
         const closeButtons = theme.querySelectorAll('.theme-message-close');
+        let toggler = [false, false, false, false];
         for (let i = 0; i < themeLinks.length; i++) {
+            
             themeLinks[i].addEventListener('click', (evt) => {
                 evt.preventDefault();
-                if (themeMessages[i].style.display == "") {
-                    themeMessages[i].style = "display: block;";
-                } else {
-                    themeMessages[i].style.display = "";
+                const message = themeMessages[i].cloneNode(true);
+                if (toggler[i]) {
+                    themeMessagesList.removeChild(message);
+                    return;
                 }
+                themeMessagesList.insertAdjacentElement('afterbegin', message);
+                const close = message.querySelector('.theme-message-close');
+                close.addEventListener('click', () => {
+                    themeMessagesList.removeChild(message);
+                }, true);
             });
-            closeButtons[i].addEventListener('click', () => {
-                themeMessages[i].style.display = "";
-            });
+
         }
     </script>
 </body>
