@@ -305,21 +305,20 @@
         const closeButtons = theme.querySelectorAll('.theme-message-close');
         let toggler = [false, false, false, false];
         for (let i = 0; i < themeLinks.length; i++) {
-            
             themeLinks[i].addEventListener('click', (evt) => {
                 evt.preventDefault();
                 const message = themeMessages[i].cloneNode(true);
-                if (toggler[i]) {
-                    themeMessagesList.removeChild(message);
-                    return;
+                if (!toggler[i]) {
+                    themeMessagesList.insertAdjacentElement('afterbegin', message);
+                    const close = message.querySelector('.theme-message-close');
+                    close.addEventListener('click', () => {
+                        themeMessagesList.removeChild(message);
+                        toggler[i] = !toggler[i];
+                    }, true);
+                    console.log(toggler[i]);
+                    toggler[i] = !toggler[i];
                 }
-                themeMessagesList.insertAdjacentElement('afterbegin', message);
-                const close = message.querySelector('.theme-message-close');
-                close.addEventListener('click', () => {
-                    themeMessagesList.removeChild(message);
-                }, true);
             });
-
         }
     </script>
 </body>
