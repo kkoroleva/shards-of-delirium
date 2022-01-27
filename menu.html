@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Варианты менюшек</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #36384d;
+        }
+
+        main {
+            width: 1200px;
+            margin: 40vh auto;
+            position: relative;
+        }
+
+        .menu-list {
+            
+            list-style: none;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #e5af71;
+
+            border: 10px solid #36384d;
+            box-shadow: 0px 0 10px #e5af71;
+        }
+
+        .menu-item {
+            width: 150px;
+            height: 100px;
+            margin-top: 1%;
+        }
+
+        .menu-element {
+            text-decoration: none;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+
+        .menu-element:hover span {
+            color: #535586;
+            
+            text-shadow: 0px 0 20px rgb(204, 120, 9);
+        }
+
+        .menu-element span {
+            display: block;
+            width: 100%;
+            color: #36384d;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+
+        .menu-icon {
+            font-size: 3em;
+        }
+
+        .menu-element:hover .menu-icon ion-icon {
+            transform: translateY(-50px);
+            background-color: #e5af71;
+            background-repeat: no-repeat;
+            transition: 0.5s;
+            border-radius: 50%;
+            border: 5px solid #36384d;
+            box-shadow: 0px 0 10px #e5af71;
+            padding: 5px;
+        }
+
+
+
+        .menu-element:hover .menu-text {
+            transform: translateY(-30px);
+        }
+
+        .mark {
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 53px;
+        }
+
+        .mark:hover {
+            transform: translateY(-50px);
+            transition: 0.5s;
+        }
+
+    </style>
+    <main>
+        <ul class="menu-list">
+            <li class="menu-item menu-item--active">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Форум</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Участники</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="trophy-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Награды</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Поиск</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Профиль</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Сообщения</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="sparkles-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Админка</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-element">
+                    <span class="menu-icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="menu-text">Выход</span>
+                </a>
+            </li>
+        </ul>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
