@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="profileinfo-filler">
+        <label for="heroName" class="profileinfo__label">Имя героя (кириллицей)</label>
+        <label for="heroAge" class="profileinfo__label">Возраст (число)</label>
+        <input class="profileinfo__input profileinfo__name" type="text" name="heroName" id="heroName"
+            placeholder="Алиса Чародейкина">
+
+        <input class="profileinfo__input profileinfo__age" type="number" name="heroAge" id="heroAge" placeholder="175">
+
+        <label for="heroRace" class="profileinfo__label">Раса</label>
+        <label for="heroJob" class="profileinfo__label">Занятие</label>
+        <input class="profileinfo__input profileinfo__race" type="text" name="heroRace" id="heroRace"
+            placeholder="эльф">
+
+        <input class="profileinfo__input profileinfo__job" type="text" name="heroJob" id="heroJob"
+            placeholder="сказочница">
+
+        <label for="heroLinkName" class="profileinfo__label">Название ссылки на анкету (необязательно)</label>
+        <label for="heroLink" class="profileinfo__label">Ссылка на анкету</label>
+        <input class="profileinfo__input profileinfo__linkname" type="text" name="heroLinkName" id="heroLinkName"
+            placeholder="досье героя">
+
+        <input class="profileinfo__input profileinfo__link" type="text" name="heroLink" id="heroLink"
+            placeholder="https://sintior.ru/viewforum.php?id=10">
+
+        <input class="profileinfo__button" type="button" value="Составить">
+    </form>
+
+    <form>
+        <textarea class="post"></textarea>
+
+        <input class="copy-button" type="button" value="Выделить">
+    </form>
+
+    <script type="text/javascript" src="heroinfo.js">
+    </script>
+
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .profileinfo-filler {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .profileinfo__input,
+        .profileinfo__label {
+            display: inline-block;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .profileinfo__link,
+        .profileinfo__linkname {
+
+        }
+
+        .profileinfo__job {}
+
+        .profileinfo__name {}
+
+        .profileinfo__age .profileinfo__race {}
+    </style>
+</body>
+
+</html>
