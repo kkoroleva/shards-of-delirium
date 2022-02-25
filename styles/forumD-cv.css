@@ -514,6 +514,13 @@ ol {
 
 }
 
+#smile-script {
+    background-image: url(../pics/forumD-cv/project-smilesScript.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
 #yours-new {
     background-image: url(../pics/forumD-cv/ds.jpg);
     background-size: cover;
