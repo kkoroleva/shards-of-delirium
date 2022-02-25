@@ -1,12 +1,15 @@
 'use strict'
 
-const post = document.querySelector('#post');
-const formButtons = post.querySelector('#form-buttons');
-
+//Структура ниже - банк со смайликами.
+//Если не получится настроить - пиши мне в дискорд (@mr.G#2360)
+const iconsWidth = '40px'; //ширина иконок (не самих смайлов) в панели (у всех одинаковая будет)
+const iconsHeight = '40px'; //высота иконок (не самих смайлов) в панели (у всех одинаковая будет)
 const smilesBank = {
-    salamandras: {
-        icon: 'https://forumstatic.ru/files/001a/bd/39/13353.png',
-        imgs: `https://forumstatic.ru/files/001a/bd/39/99521.png
+    salamandras: { //название пака (станет его id)
+        icon: 'https://forumstatic.ru/files/001a/bd/39/13353.png', //иконка для пака
+        //Ссылки на все картинки через enter. 
+        //Кавычки обязательно должны оставаться обратными!! (обычно клавиша "Ё" в qwerty)
+        imgs: `https://forumstatic.ru/files/001a/bd/39/99521.png 
         https://forumstatic.ru/files/001a/bd/39/48736.png
         https://forumstatic.ru/files/001a/bd/39/82201.png
         https://forumstatic.ru/files/001a/bd/39/82855.png
@@ -16,8 +19,15 @@ const smilesBank = {
         https://forumstatic.ru/files/001a/bd/39/52788.png
         https://forumstatic.ru/files/001a/bd/39/30476.png
         https://forumstatic.ru/files/001a/bd/39/13353.png`,
+        //Это не заполняй и не удаляй
         imgsContainer: '',
     },
+    //Если нужно добавить еще одну пачку, делаешь это по той же форме здесь в переменной smilesBank:
+    // название_пака_на_латинице: { 
+    //                                  icon: 'ссылка_на_иконку', 
+    //                                  imgs: `ссылки_на_все_смайлики_в_столбик_через_пробел`,
+    //                                  imgsContainer: '', 
+    //                            },
     dragons: {
         icon: 'https://forumstatic.ru/files/001a/bd/39/84855.png',
         imgs: `https://forumstatic.ru/files/001a/bd/39/84855.png
@@ -59,6 +69,8 @@ const smilesBank = {
     },
 };
 
+const post = document.querySelector('#post');
+const formButtons = post.querySelector('#form-buttons');
 
 formButtons.insertAdjacentHTML('beforeend', `<div class="smilesWrapper" 
     style = "display: flex; gap: 10px;"></div>`);
@@ -76,32 +88,31 @@ for (let key in smilesBank) {
 
 const smilePacks = post.querySelectorAll('.smilesContainer');
 smilePacks.forEach(pack => {
-            pack.style.width = '40px';
-            pack.style.height = '40px';
+    pack.style.width = iconsWidth; 
+    pack.style.height = iconsHeight;
 
-            pack.addEventListener('click', () => {
-                    const opened = formButtons.querySelector('.opened-smiles');
-                    if (opened === null) {
-                        formButtons.insertAdjacentHTML('afterbegin', `<div class="opened-smiles" id="${pack.id}">${smilesBank[pack.id].imgsContainer}</div>`);
-                        formButtons.querySelectorAll('.form__custom-smile').forEach(smile => {
-                                smile.addEventListener('click', smileToFormHandler);
-                            });
-                        }
-                        else if (opened.id != pack.id) {
-                            opened.remove();
-                            formButtons.insertAdjacentHTML('afterbegin', `<div class="opened-smiles" id="${pack.id}">${smilesBank[pack.id].imgsContainer}</div>`);
-                            formButtons.querySelectorAll('.form__custom-smile').forEach(smile => {
-                                smile.addEventListener('click', smileToFormHandler);
-                            });
-                        } else {
-                            opened.remove();
-                            console.log('meow');
-                        }
-                    });
-
+    pack.addEventListener('click', () => {
+        const opened = formButtons.querySelector('.opened-smiles');
+        if (opened === null) {
+            formButtons.insertAdjacentHTML('afterbegin', `<div class="opened-smiles" id="${pack.id}">${smilesBank[pack.id].imgsContainer}</div>`);
+            formButtons.querySelectorAll('.form__custom-smile').forEach(smile => {
+                smile.addEventListener('click', smileToFormHandler);
             });
-
-
-        const smileToFormHandler = (evt) => {
-            post.querySelector('#main-reply').value +=`[img]${evt.target.src}[/img]`;
+        } else if (opened.id != pack.id) {
+            opened.remove();
+            formButtons.insertAdjacentHTML('afterbegin', `<div class="opened-smiles" id="${pack.id}">${smilesBank[pack.id].imgsContainer}</div>`);
+            formButtons.querySelectorAll('.form__custom-smile').forEach(smile => {
+                smile.addEventListener('click', smileToFormHandler);
+            });
+        } else {
+            opened.remove();
+            console.log('meow');
         }
+    });
+
+});
+
+
+const smileToFormHandler = (evt) => {
+    post.querySelector('#main-reply').value += `[img]${evt.target.src}[/img]`;
+}
