@@ -1,4 +1,4 @@
-console.log('meow');
+'use strict'
 const header = document.querySelector('.main-header');
 const menuButton = header.querySelector('.menu-hamburger');
 const menu = header.querySelector('.nav');

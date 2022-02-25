@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #post {
+            margin: 20% auto 0;
+            width: 600px;
+        }
+
+        .description span {
+            display: block;
+            line-height: 150%;
+            text-decoration: underline dotted;
+            color: gray;
+        }
+
+        #main-reply {
+            width: 100%;
+        }
+    </style>
+    <div id="post">
+        <p class="description">
+            Новый скрипт смайликов! Работает без устаревающего jQuery (на Vanilla JS последней версии), и код гораздо
+            более читабельный. Плюс поправлена проблема с айдшниками (из-за присвоения смайлам айди с машинным временем
+            и скорости нынешних браузеров айдишники получались одинаковыми).
+            <span>Оформление (размер, цвет, расположение и т.д.) можно сделать любыми.</span>
+        </p>
+        <div id="form-buttons">
+
+        </div>
+        <form action="">
+            <textarea name="" id="main-reply" cols="30" rows="10"></textarea>
+            <input type="button" value="очистить" onclick="document.querySelector('#main-reply').value=''">
+        </form>
+    </div>
+    <script src="js/smile_script.js"></script>
+</body>
+
+</html>
