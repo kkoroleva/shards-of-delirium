@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__image">
+            <p class="running-string">
+                
+            </p>
+        </div>
+    </div>
+
+    <style>
+        .container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .container__image {
+            position: relative;
+            background: url('pics/top.png') no-repeat;
+            height: 790px;
+        }
+
+        .running-string {
+            position: absolute;
+            top: 620px;
+            width: 3600px;
+            height: 160px;
+            background: url('pics/download.gif') repeat-x;
+            animation: image-loop 20s linear infinite;
+        }
+
+        @keyframes image-loop  {
+            0% {
+               transform: translate(-1800px);
+            }
+
+            100% {
+                transform: translate(0px);
+            }
+        }
+    </style>
+</body>
+</html>
