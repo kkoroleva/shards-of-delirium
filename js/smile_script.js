@@ -88,7 +88,7 @@ for (let key in smilesBank) {
 
 const smilePacks = post.querySelectorAll('.smilesContainer');
 smilePacks.forEach(pack => {
-    pack.style.width = iconsWidth; 
+    pack.style.width = iconsWidth;
     pack.style.height = iconsHeight;
 
     pack.addEventListener('click', () => {

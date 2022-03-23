@@ -284,6 +284,7 @@ ol {
     position: relative;
     width: 100%;
     min-height: 300px;
+    padding: 50px 10px;
 
     background-color: var(--services-back);
     border-radius: 20px;
@@ -291,7 +292,6 @@ ol {
 
 .services__cat-headline {
     margin: 0 0 10px 90px;
-    padding: 50px 0 0 0;
 
     font-family: var(--rale-font);
     font-style: normal;
@@ -714,8 +714,6 @@ ol {
         grid-column: 2/3;
     }
 
-
-
     .services__item {
 
         min-height: 250px;
@@ -731,7 +729,7 @@ ol {
     }
 
     .service__list {
-        padding: 10px 50px;
+        padding: 10px 100px;
     }
 
     .mycites__img {
@@ -745,6 +743,60 @@ ol {
     .main-footer {
         min-width: 1000px;
     }
+
+    .dispatcher-message::after {
+        right: 15px;
+    }
+
+    .services__list {
+        flex-wrap: nowrap;
+    }
+
+    .services__item {
+        max-width: 50%;
+    }
+
+    .services__object {
+        left: 6%;
+    }
+
+    .service__list {
+        padding: 10px 10%;
+    } 
+
+    .portfolio__item {
+        width: 48%;
+    }
+
+    .portfolio__item {
+        margin-bottom: 20px;
+    }
+
+    .porfolio__list {
+        gap: 0px;
+        justify-content: space-between;
+    }
+
+    .mycites__message {
+        text-align: center;
+    }
+
+    .mycites__message::after {
+        right: 50px;
+    }
+
+    .mycites__cite {
+        display: inline-block;
+        width: 45%;
+        min-height: 380px;
+    }
+
+    .mycites__cite:last-child {
+        float: right;
+        margin-top: 0;
+    }
+
+    
 
 }
 
